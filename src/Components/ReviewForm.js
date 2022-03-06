@@ -1,29 +1,48 @@
 import { Box, Button, Grid, Rating, TextField } from "@mui/material";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
 import React, { useState } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useParams, useHistory } from "react-router-dom";
+import axios from "axios";
+
+//this is gonna be the body of the post request
+const defaultValues = {
+  author: "",
+  headline: "",
+  body: "",
+  star_rating: 0,
+};
 
 function ReviewForm(props) {
-  //gets product info through the Link that takes the user on this page
   const { id } = useParams();
   const location = useLocation();
   const { name, imgUrl } = location.state;
-  //lets the user fill out a form
-  //onsubmit send an axiox POST request to api to add the review
-  const defaultValues = {
-    author: "",
-    headline: "",
-    body: "",
-    star_rating: 0,
-  };
+
+  let history = useHistory();
+
   //the inputs are controlled by the state
   const [formValues, setFormValues] = useState(defaultValues);
 
-  const handleSubmit = () => {
-    console.log("submitted");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post(`http://localhost:3004/products/${id}/reviews`, formValues)
+      .then((res) => {
+        setFormValues(defaultValues);
+        setTimeout(() => {
+          window.open("/products/", "_self");
+        }, 1000);
+      })
+      .catch((err) => {
+        console.error("Something went wrong 😿: " + err);
+      });
   };
 
-  const handleInputChange = () => {
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({
+      ...formValues,
+      [name]: value,
+    });
     console.log("input changed");
   };
 
@@ -48,8 +67,8 @@ function ReviewForm(props) {
             >
               <Grid item>
                 <Rating
-                  name="simple-controlled"
-                  value={formValues.star_rating}
+                  name="star_rating"
+                  value={Number(formValues.star_rating)}
                   onChange={handleInputChange}
                 />
               </Grid>
@@ -74,14 +93,13 @@ function ReviewForm(props) {
                 />
               </Grid>
               <Grid item>
-                <TextareaAutosize
+                <TextField
                   id="body-input"
                   name="body"
                   label="Your Review"
-                  type="textarea"
-                  placeholder="Your Review"
-                  style={{ width: 200, height: 150 }}
-                  value={formValues.name}
+                  multiline
+                  type="text"
+                  value={formValues.body}
                   onChange={handleInputChange}
                 />
               </Grid>

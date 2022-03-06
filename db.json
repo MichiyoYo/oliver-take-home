@@ -41,6 +41,30 @@
       "body": "This plain bed feels more like a chair. It's uncomfortable to sleep on it.",
       "productId": "2",
       "id": 3
+    },
+    {
+      "author": "Cree",
+      "headline": "I LOVE IT",
+      "body": "yes this is the best ",
+      "star_rating": "5",
+      "productId": "0",
+      "id": 4
+    },
+    {
+      "author": "Mochi",
+      "headline": "So fancy",
+      "body": "The name really says what this chair is about",
+      "star_rating": "4",
+      "productId": "1",
+      "id": 5
+    },
+    {
+      "author": "asd",
+      "headline": "asd",
+      "body": "asd",
+      "star_rating": "3",
+      "productId": "3",
+      "id": 6
     }
   ]
 }
