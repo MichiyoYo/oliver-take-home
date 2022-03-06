@@ -1,7 +1,7 @@
-import { Button, Rating } from "@mui/material";
-import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import axios from "axios";
+import { Button, Rating } from "@mui/material";
+import { Link } from "react-router-dom";
 import loading from "../img/loading.gif";
 
 function ProductListItem({ product }) {
@@ -10,12 +10,6 @@ function ProductListItem({ product }) {
   const [reviews, setReviews] = useState([]);
   const [avgRating, setAvgRating] = useState(0);
   const [imgUrl, setImgUrl] = useState(loading);
-
-  let history = useHistory();
-
-  const handleClick = () => {
-    history.push(`/products/${id}`);
-  };
 
   useEffect(() => {
     axios
@@ -57,9 +51,22 @@ function ProductListItem({ product }) {
         muffins.
       </p>
 
-      <Button variant="outlined" onClick={handleClick}>
-        Learn More!
-      </Button>
+      <Link
+        to={{
+          pathname: `/products/${id}`,
+          state: {
+            name: name,
+            imgUrl: imgUrl,
+            avgRating: avgRating,
+            reviews: reviews,
+          },
+        }}
+      >
+        Learn More
+      </Link>
+      {/* <Button variant="outlined" onClick={handleClick}>
+        Learn More
+      </Button> */}
     </li>
   );
 }
