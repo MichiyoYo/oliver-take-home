@@ -1,11 +1,11 @@
 import React from "react";
-import { Grid, Typography, Rating, Button, Box } from "@mui/material";
-import { useLocation, useParams } from "react-router-dom";
+import { Grid, Rating, Box } from "@mui/material";
+import { Link, useLocation, useParams } from "react-router-dom";
 import ReviewList from "./ReviewList";
 
 function Product(props) {
-  const location = useLocation();
   const { id } = useParams();
+  const location = useLocation();
   const { name, imgUrl, avgRating, reviews } = location.state;
 
   console.log(location);
@@ -17,8 +17,30 @@ function Product(props) {
         </Grid>
         <Grid item xs={6}>
           <h2>{name}</h2>
-          <Rating name="read-only" value={avgRating} readOnly />
-          <Button variant="outlined">Review it</Button>
+          <div className="reviews">
+            <Rating
+              className="revies_stars"
+              name="read-only"
+              value={avgRating}
+              readOnly
+            />
+            <p>
+              From <span className="reviews_number">{reviews.length}</span>{" "}
+              review{reviews.length === 1 ? "" : "s"}
+            </p>
+          </div>
+          <Link
+            className="btn"
+            to={{
+              pathname: `/product/${id}/add-review`,
+              state: {
+                imgUrl: imgUrl,
+                name: name,
+              },
+            }}
+          >
+            Review it
+          </Link>
         </Grid>
       </Grid>
       {reviews.length > 0 && (

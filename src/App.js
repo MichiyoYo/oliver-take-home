@@ -1,12 +1,11 @@
-import Context from "@mui/base/TabsUnstyled/TabsContext";
-import { create } from "@mui/material/styles/createTransitions";
-import axios from "axios";
 import React, { createContext, useEffect, useState } from "react";
+import axios from "axios";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "./Components/Home";
 import Product from "./Components/Product";
 import ProductList from "./Components/ProductList";
+import ReviewForm from "./Components/ReviewForm";
 
 export const ProductContext = createContext();
 
@@ -36,6 +35,9 @@ export default function OliverTakeHome() {
           </Route>
           <Route path="/products/:id">
             <Product />
+          </Route>
+          <Route path="/product/:id/add-review">
+            <ReviewForm />
           </Route>
         </Switch>
       </Router>

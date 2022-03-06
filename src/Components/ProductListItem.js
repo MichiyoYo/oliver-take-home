@@ -46,12 +46,14 @@ function ProductListItem({ product }) {
         readOnly
       />
       <p>
-        Meow and walk away slap the dog because cats rule instead of drinking
-        water from the cat bowl, make sure to steal water from the toilet. Make
-        muffins.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
       </p>
 
       <Link
+        className="btn"
         to={{
           pathname: `/products/${id}`,
           state: {
