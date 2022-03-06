@@ -1,4 +1,4 @@
-import { Rating } from "@mui/material";
+import { Button, Rating } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
@@ -14,20 +14,20 @@ function ProductListItem({ product }) {
       .then((res) => {
         setReviews(res.data);
       })
-      .then(() => {
-        let avg = 0;
-        if (reviews.length > 0) {
-          reviews.forEach((review) => {
-            avg += review.star_rating;
-          });
-
-          setAvgRating(Math.floor(avg / reviews.length) || 0);
-        }
-      })
       .catch((err) => {
         console.error(err);
       });
-  }, []);
+  }, [id]);
+
+  useEffect(() => {
+    let avg = 0;
+    if (reviews.length) {
+      reviews.forEach((review) => {
+        avg += review.star_rating;
+      });
+      setAvgRating(Math.floor(avg / reviews.length) || 0);
+    }
+  }, [reviews]);
 
   return (
     <li className="product">
@@ -36,9 +36,13 @@ function ProductListItem({ product }) {
         alt={name}
       />
       <h2>{name}</h2>
-      <div className="star-rating">
-        <Rating name="read-only" value={avgRating} readOnly />
-      </div>
+      <Rating
+        className="star-rating"
+        name="read-only"
+        value={avgRating}
+        readOnly
+      />
+      <Button variant="outlined">Learn More!</Button>
     </li>
   );
 }
