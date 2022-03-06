@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-function Product(props) {
+function Product({ product }) {
   let { id } = useParams();
   return <div>this is a product page {id}</div>;
 }
