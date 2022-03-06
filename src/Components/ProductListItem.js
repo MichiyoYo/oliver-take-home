@@ -1,12 +1,19 @@
 import { Button, Rating } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 
 function ProductListItem({ product }) {
   const { name, id } = product;
 
   const [reviews, setReviews] = useState([]);
   const [avgRating, setAvgRating] = useState(0);
+
+  let history = useHistory();
+
+  const handleClick = () => {
+    history.push(`/products/${id}`);
+  };
 
   useEffect(() => {
     axios
@@ -42,7 +49,9 @@ function ProductListItem({ product }) {
         value={avgRating}
         readOnly
       />
-      <Button variant="outlined">Learn More!</Button>
+      <Button variant="outlined" onClick={handleClick}>
+        Learn More!
+      </Button>
     </li>
   );
 }

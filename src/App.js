@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "./Components/Home";
+import Product from "./Components/Product";
 import ProductList from "./Components/ProductList";
 
 export default function OliverTakeHome() {
@@ -26,8 +27,11 @@ export default function OliverTakeHome() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/products">
+          <Route exact path="/products">
             <ProductList products={products} />
+          </Route>
+          <Route path="/products/:id">
+            <Product />
           </Route>
         </Switch>
       </div>
