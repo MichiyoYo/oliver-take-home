@@ -1,0 +1,16 @@
+import React from "react";
+
+function ReviewListItem({ review }) {
+  const { author, star_rating, headline, body } = review;
+
+  return (
+    <li className="review">
+      <span className="review_stars">{star_rating}</span>
+      <h3 className="review_headline">{headline}</h3>
+      <p className="review_body">{body}</p>
+      <cite className="review_author">- {author}</cite>
+    </li>
+  );
+}
+
+export default ReviewListItem;

@@ -28,11 +28,19 @@
     },
     {
       "author": "new",
-      "star_rating": 5,
+      "star_rating": 3,
       "headline": "Love it",
       "body": "Would rent this dining room table one hundred times over.",
       "productId": "0",
       "id": 2
+    },
+    {
+      "author": "Cree",
+      "star_rating": 3,
+      "headline": "It could be better",
+      "body": "This plain bed is very plain.",
+      "productId": "2",
+      "id": 3
     }
   ]
 }
