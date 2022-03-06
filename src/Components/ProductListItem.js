@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Button, Rating } from "@mui/material";
+import { Rating } from "@mui/material";
 import { Link } from "react-router-dom";
 import loading from "../img/loading.gif";
 
@@ -64,9 +64,6 @@ function ProductListItem({ product }) {
       >
         Learn More
       </Link>
-      {/* <Button variant="outlined" onClick={handleClick}>
-        Learn More
-      </Button> */}
     </li>
   );
 }
