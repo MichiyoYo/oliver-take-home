@@ -18,15 +18,17 @@ function Product(props) {
         <Grid item xs={6}>
           <h2>{name}</h2>
           <Rating name="read-only" value={avgRating} readOnly />
-          <Button variant="outlined">Review it!</Button>
+          <Button variant="outlined">Review it</Button>
         </Grid>
       </Grid>
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <h3>Reviews</h3>
-          <ReviewList reviews={reviews} />
+      {reviews.length > 0 && (
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <h3>Reviews</h3>
+            <ReviewList reviews={reviews} />
+          </Grid>
         </Grid>
-      </Grid>
+      )}
     </Box>
   );
 }
