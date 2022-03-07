@@ -12,6 +12,11 @@ body {
   background-color: $bg-color !important;
 }
 
+h1 {
+  font-size: 40px;
+  color: #fff;
+}
+
 .btn {
   padding: 10px 20px;
   background-image: $btn-color;
@@ -26,5 +31,13 @@ body {
   transition: box-shadow ease 500ms;
   &:hover {
     box-shadow: 1px 1px 20px rgb(247, 99, 0);
+  }
+}
+
+.button-btn {
+  box-shadow: none !important;
+  transition: box-shadow ease 500ms;
+  &:hover {
+    box-shadow: 1px 1px 20px rgb(247, 99, 0) !important;
   }
 }

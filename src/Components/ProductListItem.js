@@ -83,7 +83,7 @@ function ProductListItem({ product }) {
             },
           }}
         >
-          Learn More
+          Reviews
         </Link>
       </div>
     </li>
