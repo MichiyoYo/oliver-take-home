@@ -1,0 +1,37 @@
+.ProductList {
+  flex: auto;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 0;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .product {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 20px;
+    height: fit-content;
+
+    @media screen and (min-width: $large) {
+      background-color: rgba(255, 255, 255, 0.623);
+      &:first-child {
+        padding-left: 40px;
+      }
+      &:last-child {
+        padding-right: 40px;
+      }
+    }
+    .product_box {
+      background-color: rgba(255, 255, 255, 0.89);
+      padding: 30px 20px;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

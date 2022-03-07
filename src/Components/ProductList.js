@@ -7,11 +7,13 @@ function ProductList(props) {
   const { products } = useContext(ProductContext);
 
   return (
-    <List
-      items={products}
-      resourceName="product"
-      itemComponent={ProductListItem}
-    />
+    <ul className="ProductList">
+      <List
+        items={products}
+        resourceName="product"
+        itemComponent={ProductListItem}
+      />
+    </ul>
   );
 }
 

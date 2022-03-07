@@ -55,35 +55,37 @@ function ProductListItem({ product }) {
 
   return (
     <li className="product">
-      <img src={imgUrl} alt={name} />
-      <h2>{name}</h2>
-      <Rating
-        className="star-rating"
-        name="read-only"
-        value={avgRating}
-        readOnly
-      />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
+      <div className="product_box">
+        <img src={imgUrl} alt={name} height="200" width="200" />
+        <h2>{name}</h2>
+        <Rating
+          className="star-rating"
+          name="read-only"
+          value={avgRating}
+          readOnly
+        />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
 
-      <Link
-        className="btn"
-        to={{
-          pathname: `/products/${id}`,
-          state: {
-            name: name,
-            imgUrl: imgUrl,
-            avgRating: avgRating,
-            reviews: reviews,
-          },
-        }}
-      >
-        Learn More
-      </Link>
+        <Link
+          className="btn"
+          to={{
+            pathname: `/products/${id}`,
+            state: {
+              name: name,
+              imgUrl: imgUrl,
+              avgRating: avgRating,
+              reviews: reviews,
+            },
+          }}
+        >
+          Learn More
+        </Link>
+      </div>
     </li>
   );
 }

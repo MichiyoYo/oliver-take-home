@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Grid, Rating, Box } from "@mui/material";
 import { Link, useLocation, useParams } from "react-router-dom";
 import ReviewList from "./ReviewList";
+import { ProductContext } from "../App";
 
 function Product(props) {
   const { id } = useParams();

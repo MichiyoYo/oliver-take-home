@@ -4,11 +4,13 @@ import ReviewListItem from "./ReviewListItem";
 
 function ReviewList({ reviews }) {
   return (
-    <List
-      items={reviews}
-      resourceName="review"
-      itemComponent={ReviewListItem}
-    />
+    <ul className="ReviewList">
+      <List
+        items={reviews}
+        resourceName="review"
+        itemComponent={ReviewListItem}
+      />
+    </ul>
   );
 }
 

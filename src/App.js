@@ -25,22 +25,24 @@ export default function OliverTakeHome() {
 
   return (
     <ProductContext.Provider value={{ products, setProducts }}>
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/products">
-            <ProductList />
-          </Route>
-          <Route path="/products/:id">
-            <Product />
-          </Route>
-          <Route path="/product/:id/add-review">
-            <ReviewForm />
-          </Route>
-        </Switch>
-      </Router>
+      <div className="App">
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/products">
+              <ProductList />
+            </Route>
+            <Route path="/products/:id">
+              <Product />
+            </Route>
+            <Route path="/product/:id/add-review">
+              <ReviewForm />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
     </ProductContext.Provider>
   );
 }

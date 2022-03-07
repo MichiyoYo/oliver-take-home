@@ -89,6 +89,22 @@
       "star_rating": "1",
       "productId": "2",
       "id": 9
+    },
+    {
+      "author": "Moe",
+      "headline": "nice",
+      "body": "This is nice",
+      "star_rating": "5",
+      "productId": "2",
+      "id": 10
+    },
+    {
+      "author": "Joan",
+      "headline": "Nice Rug",
+      "body": "This is very soft and you can sit on it",
+      "star_rating": "4",
+      "productId": "3",
+      "id": 11
     }
   ]
 }
