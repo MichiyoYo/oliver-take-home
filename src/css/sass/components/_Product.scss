@@ -1,0 +1,13 @@
+.Product {
+  background-color: #fff;
+  max-width: 50%;
+  max-height: 800px;
+  overflow: auto;
+  border-radius: 15px;
+  padding: 40px;
+
+  @media screen and (max-width: $medium) {
+    max-width: 85%;
+    padding: 20px;
+  }
+}

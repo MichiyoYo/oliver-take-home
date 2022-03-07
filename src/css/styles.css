@@ -141,3 +141,77 @@ code {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.Product {
+  background-color: #fff;
+  max-width: 50%;
+  max-height: 800px;
+  overflow: auto;
+  border-radius: 15px;
+  padding: 40px;
+}
+
+@media screen and (max-width: 992px) {
+  .Product {
+    max-width: 85%;
+    padding: 20px;
+  }
+}
+
+.ReviewList {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.ReviewListItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f8f8f8;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.ReviewListItem .review_author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ReviewListItem .review_author .author_avatar {
+  background-color: #cfb5ff;
+  margin-right: 10px;
+}
+
+.ReviewListItem .review_author .right-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ReviewListItem .review_author .right-wrapper .author_name {
+  margin: 0;
+  margin-left: 5px;
+  font-size: 23px;
+}
+
+.ReviewListItem .review_headline {
+  font-size: 20px;
+  margin: 20px 0 10px 0;
+}
+
+.ReviewListItem .review_body {
+  margin: 0;
+}
