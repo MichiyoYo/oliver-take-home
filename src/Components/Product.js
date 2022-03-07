@@ -12,15 +12,22 @@ function Product(props) {
   return (
     <div className="Product">
       <Box sx={{ flexGrow: 1 }}>
-        <Grid className="product_header" container spacing={{ xs: 2, md: 3 }}>
-          <Grid item sm={12} md={6}>
+        <Grid
+          className="product_header"
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          spacing={{ xs: 2, md: 3 }}
+        >
+          <Grid item sm={12} md={6} className="grid-item">
             <img className="product_img" src={imgUrl} alt={name} />
           </Grid>
-          <Grid item sm={12} md={6}>
+          <Grid item sm={12} md={6} className="grid-item">
             <h2>{name}</h2>
             <div className="product_reviews">
               <Rating
-                className="revies_stars"
+                className="reviews_stars"
                 name="read-only"
                 value={avgRating}
                 readOnly

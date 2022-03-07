@@ -54,7 +54,7 @@ function ProductListItem({ product }) {
   }, [reviews, imgUrl, avgRating, id]);
 
   return (
-    <li className="product">
+    <li className="ProductListItem">
       <div className="product_box">
         <img src={imgUrl} alt={name} height="200" width="200" />
         <h2>{name}</h2>
