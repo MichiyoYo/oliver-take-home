@@ -59,12 +59,20 @@
       "id": 5
     },
     {
-      "author": "asd",
-      "headline": "asd",
-      "body": "asd",
-      "star_rating": "3",
-      "productId": "3",
+      "author": "Joe",
+      "headline": "Great",
+      "body": "This works as expected",
+      "star_rating": "4",
+      "productId": "0",
       "id": 6
+    },
+    {
+      "author": "Mochi",
+      "headline": "So soft",
+      "body": "This rug is soft",
+      "star_rating": "4",
+      "productId": "3",
+      "id": 7
     }
   ]
 }
