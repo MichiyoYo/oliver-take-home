@@ -22,6 +22,18 @@ h1 {
   color: #fff;
 }
 
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
 .btn {
   padding: 10px 20px;
   background-image: -webkit-gradient(linear, right top, left top, from(#ff9000), color-stop(#ff6d33), color-stop(#ff4855), color-stop(#ff2376), to(#eb1297));
@@ -175,7 +187,7 @@ code {
 .Product {
   background-color: #fff;
   width: 550px;
-  max-height: 800px;
+  max-height: 7500px;
   overflow: auto;
   border-radius: 15px;
   padding: 40px;
@@ -274,11 +286,9 @@ code {
 .ReviewListItem .review_author .right-wrapper .author_name {
   margin: 0;
   margin-left: 5px;
-  font-size: 23px;
 }
 
 .ReviewListItem .review_headline {
-  font-size: 20px;
   margin: 20px 0 10px 0;
 }
 
