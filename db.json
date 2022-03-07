@@ -73,6 +73,22 @@
       "star_rating": "4",
       "productId": "3",
       "id": 7
+    },
+    {
+      "author": "Cree",
+      "headline": "Amazing",
+      "body": "Wow this is so good!",
+      "star_rating": "5",
+      "productId": "1",
+      "id": 8
+    },
+    {
+      "author": "Cat",
+      "headline": "what?",
+      "body": "This is not even a bed!",
+      "star_rating": "1",
+      "productId": "2",
+      "id": 9
     }
   ]
 }

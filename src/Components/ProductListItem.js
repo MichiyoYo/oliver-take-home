@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { Rating } from "@mui/material";
 import { Link } from "react-router-dom";
 import loading from "../img/loading.gif";
+import { ProductContext } from "../App";
 
 function ProductListItem({ product }) {
-  const { name, id } = product;
+  const { products, setProducts } = useContext(ProductContext);
 
+  const { name, id } = product;
   const [reviews, setReviews] = useState([]);
   const [avgRating, setAvgRating] = useState(0);
   const [imgUrl, setImgUrl] = useState(loading);
@@ -29,11 +31,27 @@ function ProductListItem({ product }) {
     let avg = 0;
     if (reviews.length) {
       reviews.forEach((review) => {
-        avg += review.star_rating;
+        avg += Number(review.star_rating);
       });
       setAvgRating(Math.floor(avg / reviews.length) || 0);
     }
   }, [reviews]);
+
+  useEffect(() => {
+    let updatedProduct = {
+      ...product,
+      imgUrl: imgUrl,
+      avgRating: avgRating,
+      reviews: reviews,
+    };
+    const prodToUpdateIdx = products.findIndex((prod) => prod.id === id);
+
+    setProducts([
+      ...products.slice(0, prodToUpdateIdx),
+      updatedProduct,
+      ...products.slice(prodToUpdateIdx + 1),
+    ]);
+  }, [reviews, imgUrl, avgRating, id]);
 
   return (
     <li className="product">

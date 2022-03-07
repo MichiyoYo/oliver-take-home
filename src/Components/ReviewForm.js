@@ -30,7 +30,7 @@ function ReviewForm(props) {
         setFormValues(defaultValues);
         setTimeout(() => {
           window.open("/products/", "_self");
-        }, 1000);
+        }, 500);
       })
       .catch((err) => {
         console.error("Something went wrong 😿: " + err);

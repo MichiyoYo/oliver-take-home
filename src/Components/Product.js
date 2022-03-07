@@ -8,7 +8,6 @@ function Product(props) {
   const location = useLocation();
   const { name, imgUrl, avgRating, reviews } = location.state;
 
-  console.log(location);
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
