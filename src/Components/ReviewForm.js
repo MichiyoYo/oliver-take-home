@@ -46,31 +46,40 @@ function ReviewForm(props) {
   return (
     <div className="ReviewForm">
       <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2}>
-          <Grid item sm={12} md={6} className="grid-item">
+        <Grid
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Grid item sm={12} className="grid-item">
+            <h2>{name}</h2>
             <img src={imgUrl} alt={name} />
           </Grid>
-          <Grid item sm={12} md={6} className="grid-item">
-            <h2>{name}</h2>
-          </Grid>
         </Grid>
-        <Grid container spacing={2}>
+        <Grid
+          className="form-container"
+          container
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+        >
           <Grid item sm={12} className="grid-item">
-            <form onSubmit={handleSubmit}>
+            <form className="form" onSubmit={handleSubmit}>
               <Grid
                 container
                 alignItems="center"
                 justify="center"
                 direction="column"
               >
-                <Grid item>
+                <Grid className="form_grid-item" item>
                   <Rating
                     name="star_rating"
                     value={Number(formValues.star_rating)}
                     onChange={handleInputChange}
                   />
                 </Grid>
-                <Grid item>
+                <Grid className="form_grid-item" item>
                   <TextField
                     id="author-input"
                     name="author"
@@ -78,9 +87,10 @@ function ReviewForm(props) {
                     type="text"
                     value={formValues.author}
                     onChange={handleInputChange}
+                    fullWidth
                   />
                 </Grid>
-                <Grid item>
+                <Grid className="form_grid-item" item>
                   <TextField
                     id="headline-input"
                     name="headline"
@@ -88,9 +98,10 @@ function ReviewForm(props) {
                     type="text"
                     value={formValues.headline}
                     onChange={handleInputChange}
+                    fullWidth
                   />
                 </Grid>
-                <Grid item>
+                <Grid className="form_grid-item" item>
                   <TextField
                     id="body-input"
                     name="body"
@@ -99,6 +110,7 @@ function ReviewForm(props) {
                     type="text"
                     value={formValues.body}
                     onChange={handleInputChange}
+                    fullWidth
                   />
                 </Grid>
 

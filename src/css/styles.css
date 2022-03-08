@@ -298,7 +298,7 @@ code {
 
 .ReviewForm {
   background-color: #fff;
-  width: 550px;
+  width: 300px;
   max-height: 800px;
   overflow: auto;
   border-radius: 15px;
@@ -327,10 +327,27 @@ code {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 0 !important;
 }
 
 .ReviewForm .grid-item img {
   background-color: #f9effc;
   padding: 20px;
   border-radius: 10px;
+}
+
+.ReviewForm .form-container {
+  margin-top: 40px;
+}
+
+.ReviewForm .form-container .form .form_grid-item {
+  margin: 8px 0;
+}
+
+.ReviewForm .form-container .form .button-btn {
+  margin-top: 20px;
+}
+
+.ReviewForm .form-container #body-input {
+  width: 195px;
 }

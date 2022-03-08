@@ -1,6 +1,6 @@
 .ReviewForm {
   background-color: #fff;
-  width: 550px;
+  width: 300px;
   max-height: 800px;
   overflow: auto;
   border-radius: 15px;
@@ -17,10 +17,27 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-top: 0 !important;
     img {
       background-color: rgb(249, 239, 252);
       padding: 20px;
       border-radius: 10px;
+    }
+  }
+
+  .form-container {
+    margin-top: 40px;
+    .form {
+      .form_grid-item {
+        margin: 8px 0;
+      }
+
+      .button-btn {
+        margin-top: 20px;
+      }
+    }
+    #body-input {
+      width: 195px;
     }
   }
 }
