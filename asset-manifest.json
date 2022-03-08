@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/oliver-take-home/static/css/main.a9993d95.chunk.css",
+    "main.js": "/oliver-take-home/static/js/main.6837af37.chunk.js",
+    "main.js.map": "/oliver-take-home/static/js/main.6837af37.chunk.js.map",
+    "runtime-main.js": "/oliver-take-home/static/js/runtime-main.a2bdf214.js",
+    "runtime-main.js.map": "/oliver-take-home/static/js/runtime-main.a2bdf214.js.map",
+    "static/js/2.7a0af9e2.chunk.js": "/oliver-take-home/static/js/2.7a0af9e2.chunk.js",
+    "static/js/2.7a0af9e2.chunk.js.map": "/oliver-take-home/static/js/2.7a0af9e2.chunk.js.map",
+    "index.html": "/oliver-take-home/index.html",
+    "static/css/main.a9993d95.chunk.css.map": "/oliver-take-home/static/css/main.a9993d95.chunk.css.map",
+    "static/js/2.7a0af9e2.chunk.js.LICENSE.txt": "/oliver-take-home/static/js/2.7a0af9e2.chunk.js.LICENSE.txt",
+    "static/media/loading.43b49ff9.gif": "/oliver-take-home/static/media/loading.43b49ff9.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2bdf214.js",
+    "static/js/2.7a0af9e2.chunk.js",
+    "static/css/main.a9993d95.chunk.css",
+    "static/js/main.6837af37.chunk.js"
+  ]
+}
